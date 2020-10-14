@@ -1,0 +1,8 @@
+npm init -y
+npm install express; @types/express -d
+npm install typescript
+TALVEZ npm install node-typescript
+npm install ts-node-dev
+
+tsc --init
+

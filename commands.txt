@@ -6,3 +6,12 @@ npm install ts-node-dev
 
 tsc --init
 
+{
+	"name": "Lar das Meninas",
+	"latitude": -27,
+	"longitude": -49.629,
+	"about": "Sobre o orfanato das meninas",
+	"instructions": "Instruções exemplo",
+	"opening_hours": "08h30 às 20h00",
+	"open_on_weekends": true
+}

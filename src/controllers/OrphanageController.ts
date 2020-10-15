@@ -36,7 +36,7 @@ export default {
 
         const schema = Yup.object().shape({ // para mensagem custom de erro: required("mensagem")
             name: Yup.string().required(),
-            latitute: Yup.number().required(),
+            latitude: Yup.number().required(),
             longitude: Yup.number().required(),
             about: Yup.string().required().max(300),
             instructions: Yup.string().required(),

@@ -7,7 +7,6 @@ import cors from 'cors'
 
 import errorHandler from './errors/handler'
 
-
 const app = express();
 app.use(cors()) // {origin: "https:://....."}
 

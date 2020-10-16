@@ -3,7 +3,6 @@ import imagesView from "./images_view";
 
 export default {
     render(orphanage: Orphanage){
-        console.log("x:"+orphanage.images);
         return {
             id: orphanage.id,
             name: orphanage.name,

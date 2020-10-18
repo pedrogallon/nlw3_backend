@@ -3,11 +3,14 @@ import imagesView from "./images_view";
 
 export default {
     render(orphanage: Orphanage){
+        var tempLat:number = parseFloat(orphanage.latitude.toString());
+        var tempLng:number = parseFloat(orphanage.longitude.toString());
+        
         return {
             id: orphanage.id,
             name: orphanage.name,
-            latitude: orphanage.latitude,
-            longitude: orphanage.longitude,
+            latitude: tempLat,
+            longitude: tempLng,
             about: orphanage.about,
             instructions: orphanage.instructions,
             opening_hours: orphanage.opening_hours,

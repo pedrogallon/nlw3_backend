@@ -1,9 +1,21 @@
 import { Request, Response } from 'express';
-import { getRepository } from 'typeorm';
+import { AdvancedConsoleLogger, getRepository } from 'typeorm';
 import Orphanage from '../models/Orphanage';
 import orphanagesView from '../views/orphanages_view';
 import * as Yup from 'yup'
+import Image from '../models/Image';
 
+interface OrphImage{
+    id: number,
+    name: string,
+    latitude: number,
+    longitude: number,
+    about: string,
+    instructions: string,
+    opening_hours: string,
+    open_on_weekends: boolean,
+    images: Image[],
+}
 
 export default {
     async create(req: Request, res: Response) {
@@ -66,7 +78,7 @@ export default {
     async getAll(req: Request, res: Response) {
         const orphRespository = getRepository(Orphanage);
 
-        const orphanages = await orphRespository.find({ relations: ['images'] });
+        const orphanages:OrphImage[] = await orphRespository.find({ relations: ['images'] });
 
         return res.json(orphanagesView.renderMany(orphanages));
     },
